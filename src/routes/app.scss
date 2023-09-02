@@ -1,0 +1,112 @@
+:root {
+    font-weight: 400;
+
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-tap-highlight-color: transparent;
+
+    font-family: var(--md-sys-typescale-body-medium-font-family-name);
+
+    // --md-filled-tonal-icon-button-container-size: 48px;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: var(--md-sys-color-surface);
+    color: var(--md-sys-color-on-surface);
+}
+
+
+.page-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column nowrap;
+    gap: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: var(--md-sys-color-on-surface);
+}
+
+.button {
+    all: unset;
+    cursor: pointer;
+    height: 40px;
+    padding: 0 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 16px;
+    font-size: 14px;
+    transition: 0.15s background-color;
+    width: fit-content;
+
+    @media (pointer: fine) {
+        &:hover {
+            background-color: var(--md-sys-color-surface-container);
+        }
+    }
+    &:active {
+        background-color: var(--md-sys-color-surface-container);
+    }
+    .material-symbols-outlined {
+        font-size: 17px;
+    }
+    &.icon-button {
+        padding: 0px;
+        width: 40px;
+        border-radius: 50%;
+    }
+}
+
+.fit-width-button {
+    width: fit-content;
+    .material-symbols-outlined {
+        font-size: 17px;
+    }
+}
+
+::-webkit-scrollbar {width: 3px; height: 3px;}
+::-webkit-scrollbar-thumb {background-color: var(--md-sys-color-secondary); border-radius: 10px;}
+::selection {background: var(--md-sys-color-primary); color: var(--md-sys-color-on-primary)}
+
+// ::view-transition-image-pair(root) {
+//     isolation: auto;    
+// }
+
+// ::view-transition-old(root),
+// ::view-transition-new(root) {
+//     animation: 1s;
+//     mix-blend-mode: normal;
+//     display: block;
+// }
+
+// ::view-transition-old(root),
+// ::view-transition-new(root) {
+//   animation-duration: 250ms;
+// }
+::view-transition-group(*) {
+    // animation-duration: 350ms;
+    animation-timing-function: var(--md-sys-motion-easing-emphasized);
+    animation-timing-function: linear(
+        0, 0.002, 0.01 3.6%, 0.034, 0.074 9.1%, 0.128 11.4%, 0.194 13.4%, 0.271 15%,
+        0.344 16.1%, 0.544, 0.66 20.6%, 0.717 22.4%, 0.765 24.6%, 0.808 27.3%,
+        0.845 30.4%, 0.883 35.1%, 0.916 40.6%, 0.942 47.2%, 0.963 55%, 0.979 64%,
+        0.991 74.4%, 0.998 86.4%, 1
+      );
+}
+::view-transition-group(navrail) {
+    z-index: 2;
+}
