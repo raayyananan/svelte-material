@@ -145,7 +145,7 @@
             }
         }
         img {
-            max-width: 400px;
+            max-width: min(400px, 100%);
             aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: 16px;

@@ -1,10 +1,9 @@
 <script lang="ts">
-    import { onMount } from "svelte";
-    import {SquigglySlider} from "./components/squiggly-slider";
-    
-    onMount(() => {
-        window.customElements.define('squiggly-slider', SquigglySlider);
-    })
+    // import { onMount } from "svelte";
+    // onMount(async () => {
+    //     const {SquigglySlider} = await import("./components/squiggly-slider");
+    //     window.customElements.define('squiggly-slider', SquigglySlider);
+    // })
 </script>
 
 <svelte:head>
@@ -12,14 +11,11 @@
 </svelte:head>
 
 <div class="page-container">
-    <div>
-        <h1>Welcome to SvelteKit</h1>
-        <!-- <squiggly-slider></squiggly-slider> -->
-    </div>
+    <h1>Welcome to SvelteKit</h1>
+    <squiggly-slider></squiggly-slider>
 </div>
 
 <style lang="scss">
-    squiggly-slider {
-        width: 100%;
-    }
+    // squiggly-slider {
+    // }
 </style>

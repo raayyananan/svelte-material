@@ -64,12 +64,16 @@ export class SquigglySlider extends HTMLElement {
     container.appendChild(rangeSlider);
 
     // define the slider canvas properties
-    [this.canvas.width, this.canvas.height, this.ctx.width, this.ctx.height, this.ctx.lineWidth] = [this.offsetWidth, 50, this.offsetWidth, 50, 4];
+    // [this.canvas.width, this.canvas.height, this.ctx.width, this.ctx.height, this.ctx.lineWidth] = [this.offsetWidth, 50, this.offsetWidth, 50, 4];
+    [this.canvas.width, this.canvas.height, this.ctx.width, this.ctx.height, this.length, this.ctx.lineWidth] = [300, 50, 300, 50, 300, 4];
+    // setTimeout(() => {
+      // [this.canvas.width, this.canvas.height, this.ctx.width, this.ctx.height, this.length, this.ctx.lineWidth] = [this.offsetWidth, 50, this.offsetWidth, 50, this.offsetWidth, 4];
+    // }, 250);
     // if (window.innerWidth < 800) {
     //   [this.canvas.width, this.canvas.height, this.ctx.width, this.ctx.height, this.ctx.lineWidth] = [300, 50, 300, 50, 4];
     // }
     this.startingTime = new Date().getTime();
-    this.length = this.ctx.width;
+    // this.length = this.ctx.width;
     this.circleRadius = 0;
     this.animatedLength = 0;
     this.ctx.lineCap = 'round';
