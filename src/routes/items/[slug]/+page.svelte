@@ -75,6 +75,7 @@
             all: unset;
             position: relative;
             width: fit-content;
+            max-width: min(400px, 100%);
             cursor: pointer;
             #circle {
                 position: absolute;
