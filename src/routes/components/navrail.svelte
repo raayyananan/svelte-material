@@ -20,13 +20,13 @@
       </span>
       <div class="text label-medium">Items</div>
     </a>
-    <a href="/" class="navrail-button" aria-label="Develop" id="develop">
+    <a href="/tasks" class="navrail-button { $page.url.pathname === '/tasks' ? 'active' : '' }" aria-label="tasks" id="tasks">
       <span class="icon material-symbols-outlined">
-        code
-        <md-ripple for="develop"></md-ripple>
-        <md-focus-ring for="develop"></md-focus-ring>
+        task
+        <md-ripple for="tasks"></md-ripple>
+        <md-focus-ring for="tasks"></md-focus-ring>
       </span>
-      <div class="text label-medium">Develop</div>
+      <div class="text label-medium">tasks</div>
     </a>
     <a href="/" class="navrail-button" aria-label="Contribute" id="contribute">
       <span class="icon material-symbols-outlined">

@@ -106,7 +106,7 @@
             }
             md-ripple {
                 --md-ripple-hover-color: rgba(0,0,0,0);
-                --md-ripple-pressed-opacity: 0.2;
+                // --md-ripple-pressed-opacity: 0.2;
                 border-radius: 16px;
                 transition: var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized);
                 z-index: 2;
