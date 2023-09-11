@@ -22,7 +22,7 @@
             <md-icon slot="icon" class="material-symbols-outlined">arrow_back</md-icon>
         </md-text-button>
         <button class="image-wrapper" on:click={switchFavourite} on:keyup={() => {}} role="link" aria-label="Go back" tabindex=0>
-            <img id="image" src="{data.image.url}" alt="{data.image.title}" style="view-transition-name: {data.image.slug}">
+            <img id="image" src="{data.image.url}" alt="{data.image.title}" style="view-transition-name: thumbnail-image">
             <div id="circle">
                 {#if favourite}
                 <md-icon class="material-symbols-outlined">heart_check</md-icon>

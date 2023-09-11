@@ -86,20 +86,21 @@ a {
 //     isolation: auto;    
 // }
 
-// ::view-transition-old(root),
-// ::view-transition-new(root) {
-//     animation: 1s;
-//     mix-blend-mode: normal;
-//     display: block;
+::view-transition-old(root),
+::view-transition-new(root) {
+    animation-duration: 25 0ms;
+    mix-blend-mode: normal;
+    display: block;
+}
+// ::view-transition-group(*) {
+    // animation-duration: 250ms;
+    // mix-blend-mode: normal;
+    // display: block;
 // }
-
-// ::view-transition-old(root),
-// ::view-transition-new(root) {
-//   animation-duration: 250ms;
-// }
-::view-transition-group(*) {
-    // animation-duration: 350ms;
-    animation-timing-function: var(--md-sys-motion-easing-emphasized);
+::view-transition-group(thumbnail-image) {
+    z-index: 1;
+    animation-duration: 500ms;
+    // animation-timing-function: var(--md-sys-motion-easing-emphasized);
     animation-timing-function: linear(
         0, 0.002, 0.01 3.6%, 0.034, 0.074 9.1%, 0.128 11.4%, 0.194 13.4%, 0.271 15%,
         0.344 16.1%, 0.544, 0.66 20.6%, 0.717 22.4%, 0.765 24.6%, 0.808 27.3%,

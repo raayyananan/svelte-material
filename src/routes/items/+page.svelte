@@ -1,5 +1,10 @@
 <script lang="ts">
     export let data;
+
+    function setViewTransitionName(id: string) {
+        const elem = document.querySelector(`#${id}`) as HTMLElement;
+        elem.style.setProperty('view-transition-name', 'thumbnail-image');
+    }
 </script>
 
 <svelte:head>
@@ -11,7 +16,7 @@
         <h1 class="display-large bold-weight">Your Collections</h1>
     </div>
     {#each data.images as {name, slug, url}}
-        <a href="/items/{slug}" data-sveltekit-noscroll class="gallery-grid-item" style="view-transition-name: {slug}">
+        <a href="/items/{slug}" data-sveltekit-noscroll id={slug} class="gallery-grid-item" on:click={() => {setViewTransitionName(slug)}}>
             <img src="{url}" alt="{name}">
         </a>
     {/each}
