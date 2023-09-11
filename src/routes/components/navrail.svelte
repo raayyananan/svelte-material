@@ -126,9 +126,22 @@
       flex-flow: row nowrap;
       width: 100%;
       justify-content: space-evenly;
-      background: var(--md-sys-color-surface-container);
+      background-color: rgba(241, 238, 229, 0.75);
+      backdrop-filter: blur(15px);
       gap: 0px;
       view-transition-name: navrail;
+
+      .navrail-button.active {
+        .text {font-weight: var(--bold-weight)}
+        .icon {
+          background-color: transparent;
+          font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24
+        }
+      }
     }
   }
 </style>
