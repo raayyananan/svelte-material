@@ -126,10 +126,15 @@
       flex-flow: row nowrap;
       width: 100%;
       justify-content: space-evenly;
-      background-color: rgba(241, 238, 229, 0.75);
-      backdrop-filter: blur(15px);
+      background-color: var(--md-sys-color-surface-container);
+      // background-color: rgba(241, 238, 229, 0.75);
+      // backdrop-filter: blur(15px);
       gap: 0px;
       view-transition-name: navrail;
+
+      @media (prefers-color-scheme: dark) {
+        // background-color: rgba(32, 32, 26, 0.75);
+      }
 
       .navrail-button.active {
         .text {font-weight: var(--bold-weight)}

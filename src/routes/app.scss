@@ -88,7 +88,7 @@ a {
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 25 0ms;
+    animation-duration: 250ms;
     mix-blend-mode: normal;
     display: block;
 }
@@ -108,6 +108,15 @@ a {
         0.991 74.4%, 0.998 86.4%, 1
       );
 }
+::view-transition-old(thumbnail-image):only-child {
+    animation: 150ms fade-out forwards;
+}
+
 ::view-transition-group(navrail) {
     z-index: 2;
+}
+
+@keyframes fade-out {
+    0% {opacity: 1}
+    100% {opacity: 0}
 }
