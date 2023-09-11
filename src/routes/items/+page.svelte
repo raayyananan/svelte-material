@@ -18,6 +18,7 @@
     {#each data.images as {name, slug, url}}
         <a href="/items/{slug}" data-sveltekit-noscroll id={slug} class="gallery-grid-item" on:click={() => {setViewTransitionName(slug)}}>
             <img src="{url}" alt="{name}">
+            <md-ripple></md-ripple>
         </a>
     {/each}
 </div>
@@ -39,6 +40,9 @@
 
         .gallery-grid-item {
             border-radius: 16px;
+            position: relative;
+            --md-ripple-hover-opacity: 0;
+
             &:focus-visible {
                 outline: none;
                 img {
