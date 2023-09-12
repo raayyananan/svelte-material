@@ -66,11 +66,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            animation: var(--md-sys-motion-duration-medium2) var(--md-sys-motion-duration-short3) slide-fade-in forwards;
+            opacity: 0;
 
             md-filled-tonal-icon-button {
                 flex-shrink: 0;
+                animation: var(--md-sys-motion-duration-medium2) var(--md-sys-motion-duration-medium1) cubic-bezier(0.175, 0.885, 0.32, 1.275) scale-in forwards;
+                scale: 0;
+                
+                @keyframes scale-in {
+                    0% {scale: 0}
+                    100% {scale: 1}
+                }
             }
         }
+        p {
+            margin: 0;
+            max-width: 85%;
+            animation: var(--md-sys-motion-duration-medium2) var(--md-sys-motion-duration-short4) slide-fade-in forwards;
+            opacity: 0;
+        }
+
+        @keyframes slide-fade-in {
+            0% {opacity: 0; translate: 0 10px}
+            100% {opacity: 1; translate: 0 0px;}
+        }
+
         .image-wrapper {
             all: unset;
             position: relative;
@@ -92,6 +113,14 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                animation: 500ms 500ms appear-in forwards;
+                opacity: 0;
+                scale: 0;
+
+                @keyframes appear-in {
+                    0% {opacity: 0;}
+                    100% {opacity: 1;}
+                }
 
                 .material-symbols-outlined {
                     // transition: var(--md-sys-motion-duration-long2) cubic-bezier(0.175, 0.885, 0.32, 1.375);
@@ -120,6 +149,7 @@
                 #circle {
                     translate: 24% -60%;
                     rotate: 45deg;
+                    scale: 1;
                     transform-origin: bottom;
 
                     .material-symbols-outlined {
@@ -150,10 +180,6 @@
             aspect-ratio: 4/3;
             object-fit: cover;
             border-radius: 16px;
-        }
-        p {
-            margin: 0;
-            max-width: 85%;
         }
         md-filled-tonal-icon-button md-icon, #circle md-icon {
             animation: scale-up var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized-decelerate);

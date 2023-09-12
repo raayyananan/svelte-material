@@ -88,15 +88,15 @@ a {
 
 ::view-transition-old(root),
 ::view-transition-new(root) {
-    animation-duration: 250ms;
+    // animation-duration: 250ms;
     mix-blend-mode: normal;
     display: block;
 }
-// ::view-transition-group(*) {
+::view-transition-group(*) {
     // animation-duration: 250ms;
-    // mix-blend-mode: normal;
-    // display: block;
-// }
+    mix-blend-mode: normal;
+    display: block;
+}
 ::view-transition-group(thumbnail-image) {
     z-index: 1;
     animation-duration: 500ms;
