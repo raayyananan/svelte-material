@@ -78,14 +78,14 @@
           --md-ripple-hover-opacity: 0;
 
           .icon {
-          border-radius: 20px;
-          width: 52px;
-          height: 32px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized) background-color;
-          position: relative;
+            border-radius: 20px;
+            width: 52px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--md-sys-motion-duration-short4) var(--md-sys-motion-easing-emphasized) background-color;
+            position: relative;
           }
           .text {font-weight: var(--semibold-weight)}
 
@@ -99,7 +99,14 @@
               }
           }
           }
-          &.active .icon {background-color: var(--md-sys-color-secondary-container);}
+          &.active .icon {
+            background-color: var(--md-sys-color-secondary-container);
+            font-variation-settings:
+              'FILL' 1,
+              'wght' 400,
+              'GRAD' 0,
+              'opsz' 24
+          }
           // &:focus-visible .icon {
           // animation: var(--md-sys-motion-duration-long4) var(--md-sys-motion-easing-emphasized-decelerate) outline-animation forwards;
           // @keyframes outline-animation {
@@ -138,14 +145,6 @@
 
       .navrail-button.active {
         .text {font-weight: var(--bold-weight)}
-        .icon {
-          background-color: transparent;
-          font-variation-settings:
-            'FILL' 1,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
-        }
       }
     }
   }
