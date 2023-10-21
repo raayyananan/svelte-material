@@ -131,6 +131,7 @@
             img {
                 position: relative;
                 z-index: 1;
+                width: 100%;
                 transition: var(--md-sys-motion-duration-medium4) var(--md-sys-motion-easing-emphasized);
             }
             md-ripple {

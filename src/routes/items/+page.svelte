@@ -26,14 +26,14 @@
 <style lang="scss">
     .gallery-grid {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         box-sizing: border-box;
         padding: 20px;
         gap: 20px;
         height: fit-content;
 
         .top-bar {
-            grid-column: span 3;
+            grid-column: span 4;
             box-sizing: border-box;
             padding: 38px 0 48px 0px;
         }
@@ -41,7 +41,8 @@
         .gallery-grid-item {
             border-radius: 16px;
             position: relative;
-            --md-ripple-hover-opacity: 0;
+            overflow: hidden;
+            --md-ripple-hover-opacity: 0.03;
 
             &:focus-visible {
                 outline: none;
@@ -56,11 +57,15 @@
                     }
                 }
             }
+            // &:hover {
+            //     img {scale: 1.025}
+            // }
             img {
                 width: 100%;
                 aspect-ratio: 4/3;
                 object-fit: cover;
                 border-radius: 16px;
+                // transition: scale var(--md-sys-motion-duration-long4) var(--md-sys-motion-easing-emphasized-decelerate);
             }
         }
 
