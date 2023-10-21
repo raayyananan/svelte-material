@@ -68,7 +68,14 @@
                 // transition: scale var(--md-sys-motion-duration-long4) var(--md-sys-motion-easing-emphasized-decelerate);
             }
         }
+        
+        @media (max-width: 1080px) { // mobile-width
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 10px 10px 98px 10px;
+            gap: 10px;
 
+            .top-bar {grid-column: span 3}
+        }
         @media (max-width: 560px) { // mobile-width
             grid-template-columns: 1fr 1fr;
             padding: 10px 10px 98px 10px;
@@ -77,12 +84,5 @@
             .top-bar {grid-column: span 2}
         }
 
-        @media (max-width: 972px) { // mobile-width
-            grid-template-columns: 1fr 1fr 1fr;
-            padding: 10px 10px 98px 10px;
-            gap: 10px;
-
-            .top-bar {grid-column: span 3}
-        }
     }    
 </style>
