@@ -76,5 +76,13 @@
 
             .top-bar {grid-column: span 2}
         }
+
+        @media (max-width: 972px) { // mobile-width
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 10px 10px 98px 10px;
+            gap: 10px;
+
+            .top-bar {grid-column: span 3}
+        }
     }    
 </style>
